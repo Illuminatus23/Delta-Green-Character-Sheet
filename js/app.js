@@ -1,5 +1,6 @@
 $(document).foundation();
 var deltagreen = {
+    playerdata : {},
     data : {
         statdescriptors: {
             'str' : ['Feeble','Weak','Muscular','Huge'],
@@ -18,8 +19,8 @@ var deltagreen = {
 					'history' : 60,
 					'occult' : 40,
 					'persuade' : 40,
-					'language' : 50,
-					'language2' : 40
+					'language-1' : 50,
+					'language-2' : 40
 				},
 				pick: {
 					picks: 2,
@@ -42,8 +43,8 @@ var deltagreen = {
 					'history' : 60,
 					'occult' : 40,
 					'persuade' : 40,
-					'language' : 50,
-					'language2' : 40
+					'language-1' : 50,
+					'language-2' : 40
 				},
 				pick: {
 					picks: 2,
@@ -61,7 +62,7 @@ var deltagreen = {
 			'computer scientist' :{
 				mainstat: ['inte'],
 				skills: {
-					'computer science' : 60,
+					'computer_science' : 60,
 					'craft-electronics' : 30,
 					'craft-mechanic' : 30,
 					'craft-microelectronics' : 40,
@@ -74,8 +75,8 @@ var deltagreen = {
 						'accounting' : 50,
 						'bureaucracy' : 50,
 						'craft-choose' : 40,
-						'language' : 40,
-						'heavy machinery' : 50,
+						'language-1' : 40,
+						'heavy_machinery' : 50,
 						'law' : 40,
 						'science-choose' : 40
 					}
@@ -85,7 +86,7 @@ var deltagreen = {
 			'engineer' :{
                 mainstat: ['inte'],
                 skills: {
-                    'computer science' : 60,
+                    'computer_science' : 60,
                     'craft-electronics' : 30,
                     'craft-mechanic' : 30,
                     'craft-microelectronics' : 40,
@@ -98,8 +99,8 @@ var deltagreen = {
                         'accounting' : 50,
                         'bureaucracy' : 50,
                         'craft-choose' : 40,
-                        'language' : 40,
-                        'heavy machinery' : 50,
+                        'language-1' : 40,
+                        'heavy_machinery' : 50,
                         'law' : 40,
                         'science-choose' : 40
                     }
@@ -119,15 +120,15 @@ var deltagreen = {
 					'law' : 30,
 					'persuade' : 50,
 					'search' : 50,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 1,
 					skills: {
 						'accounting' : 60,
-						'computer science' : 50,
-						'language' : 50,
-						'heavy weapons' : 50,
+						'computer_science' : 50,
+						'language-1' : 50,
+						'heavy_weapons' : 50,
 						'pharmacy' : 50
 					}
 				},
@@ -137,7 +138,7 @@ var deltagreen = {
 				mainstat: ['inte','pow','dex'],
 				skills: {
 					'bureaucracy' : 50,
-					'first aid' : 60,
+					'first_aid' : 60,
 					'medicine' : 60,
 					'persuade' : 40,
 					'pharmacy' : 50,
@@ -159,17 +160,17 @@ var deltagreen = {
 				mainstat: ['inte'],
 				skills: {
 					'bureaucracy' : 40,
-					'computer science' : 40,
-					'science-choose' : 60,
-					'science-choose' : 50,
-					'science-choose' : 50
+					'computer_science' : 40,
+					'science-choose-1' : 60,
+					'science-choose-2' : 50,
+					'science-choose-3' : 50
 				},
 				pick: {
 					picks: 3,
 					skills: {
 						'accounting' : 50,
 						'craft-choose' : 40,
-						'language' : 40,
+						'language-1' : 40,
 						'forensics' : 40,
 						'law' : 40,
 						'pharmacy' : 40
@@ -184,14 +185,14 @@ var deltagreen = {
 					'athletics' : 60,
 					'demolitions' : 40,
 					'firearms' : 60,
-					'heavy weapons' : 50,
-					'melee weapons' : 50,
-					'military science-land' : 60,
+					'heavy_weapons' : 50,
+					'melee_weapons' : 50,
+					'military_science-land' : 60,
 					'navigate' : 50,
 					'stealth' : 50,
 					'survival' : 50,
 					'swim' : 50,
-					'unarmed combat': 60
+					'unarmed_combat': 60
 				},
 				pick: {
 					picks: 0,
@@ -208,10 +209,10 @@ var deltagreen = {
 					'drive' : 50,
 					'firearms' : 40,
 					'law' : 40,
-					'melee weapons' : 40,
+					'melee_weapons' : 40,
 					'persuade' : 50,
 					'stealth' : 50,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 2,
@@ -219,7 +220,7 @@ var deltagreen = {
 						'craft-locksmithing' : 40,
 						'demolitions' : 40,
 						'disguise' : 50,
-						'language' : 40,
+						'language-1' : 40,
 						'forensics' : 40,
 						'HUMINT' : 50,
 						'navigate' : 50,
@@ -238,9 +239,9 @@ var deltagreen = {
 					'craft-mechanic' : 40,
 					'demolitions' : 50,
 					'drive' : 50,
-					'first aid' : 50,
+					'first_aid' : 50,
 					'forensics' : 40,
-					'heavy machinery' : 50,
+					'heavy_machinery' : 50,
 					'navigate' : 50,
 					'search' : 40
 				},
@@ -256,9 +257,9 @@ var deltagreen = {
 					'accounting' : 40,
 					'anthropology' : 40,
 					'bureaucracy' : 60,
-					'language' : 50,
-					'language2' : 50,
-					'language3' : 40,
+					'language-1' : 50,
+					'language-2' : 50,
+					'language-3' : 40,
 					'history' : 40,
 					'HUMINT' : 50,
 					'law' : 40,
@@ -275,11 +276,11 @@ var deltagreen = {
 				skills: {
 					'anthropology' : 40,
 					'bureaucracy' : 50,
-					'computer science' : 40,
+					'computer_science' : 40,
 					'criminology' : 40,
-					'language' : 50,
-					'language2' : 50,
-					'language3' : 40,
+					'language-1' : 50,
+					'language-2' : 50,
+					'language-3' : 40,
 					'history' : 40,
 					'HUMINT' : 50,
 					'SIGINT' : 40
@@ -299,13 +300,13 @@ var deltagreen = {
 					'disguise' : 50,
 					'drive' : 40,
 					'firearms' : 40,
-					'language' : 50,
-					'language2' : 40,
+					'language-1' : 50,
+					'language-2' : 40,
 					'HUMINT' : 60,
 					'persuade' : 40,
 					'SIGINT' : 40,
 					'stealth' : 50,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 0,
@@ -324,9 +325,9 @@ var deltagreen = {
 				pick: {
 					picks: 4,
 					skills: {
-						'computer science' : 50,
+						'computer_science' : 50,
 						'criminology' : 60,
-						'language' : 50,
+						'language-1' : 50,
 						'law' : 50,
 						'pharmacy' : 50
 					}
@@ -344,9 +345,9 @@ var deltagreen = {
 				pick: {
 					picks: 4,
 					skills: {
-						'computer science' : 50,
+						'computer_science' : 50,
 						'criminology' : 60,
-						'language' : 50,
+						'language-1' : 50,
 						'law' : 50,
 						'pharmacy' : 50
 					}
@@ -368,11 +369,11 @@ var deltagreen = {
 						'archeology' : 40,
 						'art-choose' : 40,
 						'bureaucracy' : 50,
-						'computer science' : 40,
+						'computer_science' : 40,
 						'criminology' : 50,
-						'language' : 40,
+						'language-1' : 40,
 						'law' : 40,
-						'military science-choose' : 40,
+						'military_science-choose' : 40,
 						'occult' : 50,
 						'science-choose' : 40
 					}
@@ -384,7 +385,7 @@ var deltagreen = {
 				skills: {
 					'alertness' : 40,
 					'bureaucracy' : 50,
-					'first aid' : 60,
+					'first_aid' : 60,
 					'HUMINT' : 40,
 					'medicine' : 40,
 					'persuade' : 40,
@@ -408,7 +409,7 @@ var deltagreen = {
 				skills: {
 					'alertness' : 40,
 					'bureaucracy' : 50,
-					'first aid' : 60,
+					'first_aid' : 60,
 					'HUMINT' : 40,
 					'medicine' : 40,
 					'persuade' : 40,
@@ -442,10 +443,10 @@ var deltagreen = {
 				pick: {
 					picks: 2,
 					skills: {
-						'language' : 50,
+						'language-1' : 50,
 						'pilot-choose' : 50,
-						'heavy weapons' : 50,
-						'military science-choose' : 50
+						'heavy_weapons' : 50,
+						'military_science-choose' : 50
 					}
 				},
 				bonds: 4
@@ -465,10 +466,10 @@ var deltagreen = {
 				pick: {
 					picks: 2,
 					skills: {
-						'language' : 50,
+						'language-1' : 50,
 						'pilot-choose' : 50,
-						'heavy weapons' : 50,
-						'military science-choose' : 50
+						'heavy_weapons' : 50,
+						'military_science-choose' : 50
 					}
 				},
 				bonds: 4
@@ -481,21 +482,21 @@ var deltagreen = {
 					'criminology' : 40,
 					'drive' : 50,
 					'firearms' : 40,
-					'first aid' : 30,
+					'first_aid' : 30,
 					'HUMINT' : 50,
 					'law' : 30,
-					'melee weapons' : 50,
+					'melee_weapons' : 50,
 					'navigate' : 40,
 					'persuade' : 40,
 					'search' : 40,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 1,
 					skills: {
 						'forensics' : 50,
-						'heavy machinery' : 60,
-						'heavy weapons' : 50,
+						'heavy_machinery' : 60,
+						'heavy_weapons' : 50,
 						'ride' : 60
 					}
 				},
@@ -506,9 +507,9 @@ var deltagreen = {
 				skills: {
 					'accounting' : 60,
 					'bureaucracy' : 60,
-					'computer science' : 50,
+					'computer_science' : 50,
 					'criminology' : 30,
-					'language' : 50,
+					'language-1' : 50,
 					'history' : 40,
 					'law' : 40,
 					'persuade' : 50
@@ -532,22 +533,22 @@ var deltagreen = {
 					'bureaucracy' : 30,
 					'drive' : 40,
 					'firearms' : 40,
-					'first aid' : 40,
-					'military science-land' : 40,
+					'first_aid' : 40,
+					'military_science-land' : 40,
 					'navigate' : 40,
 					'persuade' : 30,
-					'unarmed combat': 50
+					'unarmed_combat': 50
 				},
 				pick: {
 					picks: 3,
 					skills: {
 						'artillery' : 40,
-						'computer science' : 40,
+						'computer_science' : 40,
 						'craft-choose' : 40,
 						'demolitions' : 40,
-						'language' : 40,
-						'heavy machinery' : 50,
-						'heavy weapons' : 40,
+						'language-1' : 40,
+						'heavy_machinery' : 50,
+						'heavy_weapons' : 40,
 						'search' : 60,
 						'SIGINT' : 40,
 						'swim' : 60
@@ -566,14 +567,14 @@ var deltagreen = {
 					'dodge' : 50,
 					'firearms' : 60,
 					'forensics' : 30,
-					'heavy weapons' : 50,
-					'melee weapons' :50,
-					'military science-land': 60,
+					'heavy_weapons' : 50,
+					'melee_weapons' :50,
+					'military_science-land': 60,
 					'navigate': 50,
 					'stealth' : 50,
 					'survival' : 50,
 					'swim' : 50,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 0,
@@ -590,16 +591,16 @@ var deltagreen = {
 					'drive' : 40,
 					'firearms' : 50,
 					'forensics' : 30,
-					'language': 30,
-					'heavy weapons' : 30,
+					'language-1': 30,
+					'heavy_weapons' : 30,
 					'HUMINT' :40,
 					'law': 30,
-					'military science-land': 30,
+					'military_science-land': 30,
 					'persuade' : 40,
 					'pharmacy' : 30,
 					'search' : 50,
 					'survival' : 30,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 0,
@@ -617,13 +618,13 @@ var deltagreen = {
 					'drive' : 50,
 					'firearms' : 50,
 					'forensics' : 30,
-					'heavy weapons' : 50,
+					'heavy_weapons' : 50,
 					'HUMINT' :60,
 					'law': 30,
 					'persuade' : 50,
 					'search' : 50,
 					'stealth' : 40,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 0,
@@ -642,13 +643,13 @@ var deltagreen = {
 					'drive' : 50,
 					'firearms' : 50,
 					'forensics' : 30,
-					'heavy weapons' : 50,
+					'heavy_weapons' : 50,
 					'HUMINT' :60,
 					'law': 30,
 					'persuade' : 50,
 					'search' : 50,
 					'stealth' : 40,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 0,
@@ -664,22 +665,22 @@ var deltagreen = {
 					'bureaucracy' : 30,
 					'drive' : 40,
 					'firearms' : 40,
-					'first aid' : 30,
-					'military science-land' : 40,
+					'first_aid' : 30,
+					'military_science-land' : 40,
 					'navigate' :50,
 					'persuade': 30,
 					'survival' : 50,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 3,
 					skills: {
-						'computer science' : 40,
+						'computer_science' : 40,
 						'craft-choose' : 40,
 						'demolitions' : 40,
-						'language' : 40,
-						'heavy machinery' : 50,
-						'heavy weapons' : 40,
+						'language-1' : 40,
+						'heavy_machinery' : 50,
+						'heavy_weapons' : 40,
 						'search' : 60,
 						'SIGINT' : 40,
 						'swim' : 60
@@ -695,23 +696,23 @@ var deltagreen = {
 					'bureaucracy' : 30,
 					'drive' : 50,
 					'firearms' : 40,
-					'first aid' : 30,
-					'heavy machinery' : 40,
-					'heavy weapons' : 40,
-					'military science-land' : 40,
+					'first_aid' : 30,
+					'heavy_machinery' : 40,
+					'heavy_weapons' : 40,
+					'military_science-land' : 40,
 					'navigate' :50,
 					'stealth': 30,
 					'survival' : 50,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 1,
 					skills: {
 						'artilery' : 40,
-						'computer science' : 40,
+						'computer_science' : 40,
 						'craft-choose' : 40,
 						'demolitions' : 40,
-						'language' : 40,
+						'language-1' : 40,
 						'SIGINT' : 40
 					}
 				},
@@ -726,7 +727,7 @@ var deltagreen = {
 					'craft-electronics' : 40,
 					'craft-mechanic' : 40,
 					'demolitions' : 60,
-					'military science-sea' : 50,
+					'military_science-sea' : 50,
 					'navigate' :50,
 					'pilot-choose': 40,
 					'science-meteorology' : 40,
@@ -746,7 +747,7 @@ var deltagreen = {
 					'athletics' : 50,
 					'bureaucracy' : 40,
 					'firearms' : 40,
-					'first aid' : 60,
+					'first_aid' : 60,
 					'HUMINT' : 40,
 					'medicine' : 40,
 					'persuade' :50,
@@ -774,14 +775,14 @@ var deltagreen = {
 					'demolitions' : 40,
 					'dodge' : 50,
 					'firearms' : 60,
-					'heavy weapons' : 50,
-					'melee weapons' : 50,
-					'military science-land' : 60,
+					'heavy_weapons' : 50,
+					'melee_weapons' : 50,
+					'military_science-land' : 60,
 					'navigate' :60,
 					'stealth': 60,
 					'survival' : 60,
 					'swim' : 50,
-					'unarmed combat' : 60
+					'unarmed_combat' : 60
 				},
 				pick: {
 					picks: 0,
@@ -795,16 +796,16 @@ var deltagreen = {
 					'art-videography' : 50,
 					'athletics' : 60,
 					'bureaucracy' : 50,
-					'computer science' : 30,
+					'computer_science' : 30,
 					'firearms' : 60,
 					'craft-electronics' : 50,
 					'firearms' : 40,
 					'history' : 40,
 					'HUMINT' :50,
-					'melee weapons': 40,
+					'melee_weapons': 40,
 					'persuade' : 50,
 					'survival' : 40,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 0,
@@ -822,15 +823,15 @@ var deltagreen = {
 					'dodge' : 50,
 					'drive' : 40,
 					'firearms' : 60,
-					'first aid' : 30,
-					'language' :40,
-					'heavy machinery': 50,
-					'heavy weapons' : 50,
-					'military science-land' : 40,
+					'first_aid' : 30,
+					'language-1' :40,
+					'heavy_machinery': 50,
+					'heavy_weapons' : 50,
+					'military_science-land' : 40,
 					'navigate':40,
 					'persuade' : 30,
 					'swim' : 60,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 0,
@@ -846,20 +847,20 @@ var deltagreen = {
 					'bureaucracy' : 30,
 					'drive' : 40,
 					'firearms' : 60,
-					'first aid' : 30,
-					'heavy weapons' : 40,
-					'military science-land' : 40,
+					'first_aid' : 30,
+					'heavy_weapons' : 40,
+					'military_science-land' : 40,
 					'navigate':40,
 					'persuade' : 30,
 					'survival' : 30,
-					'unarmed combat' : 50
+					'unarmed_combat' : 50
 				},
 				pick: {
 					picks: 2,
 					skills: {
 						'demolitions' : 40,
-						'language' : 40,
-						'heavy machinery' : 50,
+						'language-1' : 40,
+						'heavy_machinery' : 50,
 						'search' : 60,
 						'SIGINT' : 40,
 						'swim' : 60
@@ -874,19 +875,19 @@ var deltagreen = {
                     'athletics' : 60,
                     'demolitions' : 40,
                     'firearms' : 60,
-                    'heavy weapons' : 50,
-                    'melee weapons': 50,
-                    'military science-land' : 60,
+                    'heavy_weapons' : 50,
+                    'melee_weapons': 50,
+                    'military_science-land' : 60,
                     'navigate':50,
                     'stealth' : 50,
                     'survival' : 50,
                     'swim' : 50,
-                    'unarmed combat' : 60
+                    'unarmed_combat' : 60
                 },
                 pick: {
                     picks: 1,
                     skills: {
-                        'first aid' : 60,
+                        'first_aid' : 60,
                         'SIGINT' : 50
                     }
                 },
@@ -899,17 +900,17 @@ var deltagreen = {
                     'athletics' : 60,
                     'demolitions' : 40,
                     'firearms' : 60,
-                    'language' : 20,
-                    'heavy weapons' : 50,
+                    'language-1' : 20,
+                    'heavy_weapons' : 50,
                     'HUMINT': 40,
-                    'melee weapons': 50,
-                    'military science-land' : 60,
+                    'melee_weapons': 50,
+                    'military_science-land' : 60,
                     'navigate':50,
                     'persuade': 40,
                     'stealth' : 50,
                     'survival' : 50,
                     'swim' : 50,
-                    'unarmed combat' : 60
+                    'unarmed_combat' : 60
                 },
                 pick: {
                     picks: 0,
@@ -924,14 +925,14 @@ var deltagreen = {
                     'athletics' : 60,
                     'demolitions' : 40,
                     'firearms' : 60,
-                    'heavy weapons' : 50,
-                    'melee weapons': 50,
-                    'military science-land' : 60,
+                    'heavy_weapons' : 50,
+                    'melee_weapons': 50,
+                    'military_science-land' : 60,
                     'navigate':50,
                     'stealth' : 50,
                     'survival' : 50,
                     'swim' : 50,
-                    'unarmed combat' : 60
+                    'unarmed_combat' : 60
                 },
                 pick: {
                     picks: 0,
@@ -947,14 +948,14 @@ var deltagreen = {
                     'bureaucracy':30,
                     'drive':40,
                     'firearms' : 40,
-                    'first aid': 30,
-                    'language':40,
+                    'first_aid': 30,
+                    'language-1':40,
                     'HUMINT':50,
-                    'military science-land' : 40,
+                    'military_science-land' : 40,
                     'navigate':40,
                     'persuade' : 50,
                     'SIGINT' : 40,
-                    'unarmed combat' : 50
+                    'unarmed_combat' : 50
                 },
                 pick: {
                     picks: 0,
@@ -971,9 +972,9 @@ var deltagreen = {
                     'craft-electrician':40,
                     'craft-mechanic':40,
                     'firearms' : 40,
-                    'heavy weapons': 50,
-                    'military science-air':60,
-                    'military science-land' : 20,
+                    'heavy_weapons': 50,
+                    'military_science-air':60,
+                    'military_science-land' : 20,
                     'navigate':60,
                     'pilot-helicopter': 60,
                     'science-meteorology' : 50,
@@ -991,16 +992,16 @@ var deltagreen = {
                     'alertness' : 60,
                     'athletics' : 60,
                     'firearms' : 60,
-                    'heavy weapons': 50,
+                    'heavy_weapons': 50,
                     'HUMINT':50,
-                    'melee weapons':50,
-                    'military science-land' : 60,
+                    'melee_weapons':50,
+                    'military_science-land' : 60,
                     'navigate':50,
                     'SIGINT': 50,
                     'stealth' : 50,
                     'survival':50,
                     'swim' : 50,
-                    'unarmed combat': 60
+                    'unarmed_combat': 60
                 },
                 pick: {
                     picks: 0,
@@ -1015,16 +1016,16 @@ var deltagreen = {
                     'athletics' : 60,
                     'demolitions':40,
                     'firearms' : 60,
-                    'heavy weapons': 50,
-                    'melee weapons':50,
-                    'military science-land' : 60,
+                    'heavy_weapons': 50,
+                    'melee_weapons':50,
+                    'military_science-land' : 60,
                     'navigate':50,
                     'persuade': 40,
                     'pilot-boat' : 40,
                     'stealth':50,
                     'survival':50,
                     'swim' : 50,
-                    'unarmed combat': 60
+                    'unarmed_combat': 60
                 },
                 pick: {
                     picks: 0,
@@ -1039,15 +1040,15 @@ var deltagreen = {
                     'athletics' : 60,
                     'demolitions':40,
                     'firearms' : 60,
-                    'heavy weapons': 50,
-                    'melee weapons':50,
-                    'military science-land' : 60,
+                    'heavy_weapons': 50,
+                    'melee_weapons':50,
+                    'military_science-land' : 60,
                     'navigate':50,
                     'pilot-boat' : 40,
                     'stealth':50,
                     'survival':60,
                     'swim' : 60,
-                    'unarmed combat': 60
+                    'unarmed_combat': 60
                 },
                 pick: {
                     picks: 0,
@@ -1062,16 +1063,16 @@ var deltagreen = {
                     'athletics' : 50,
                     'demolitions':40,
                     'firearms' : 60,
-                    'heavy weapons': 50,
+                    'heavy_weapons': 50,
                     'HUMINT':30,
-                    'melee weapons':50,
-                    'military science-land' : 50,
+                    'melee_weapons':50,
+                    'military_science-land' : 50,
                     'navigate':50,
                     'persuade' : 40,
                     'stealth':50,
                     'survival':50,
                     'swim' : 40,
-                    'unarmed combat': 60
+                    'unarmed_combat': 60
                 },
                 pick: {
                     picks: 0,
@@ -1088,15 +1089,15 @@ var deltagreen = {
                     'bureaucracy':60,
                     'disguise':40,
                     'firearms':40,
-                    'language':50,
-                    'language':50,
-                    'language':40,
+                    'language-1':50,
+                    'language-2':50,
+                    'language-3':40,
                     'history':40,
                     'HUMINT':50,
                     'law':40,
                     'persuade':50,
                     'stealth':50,
-                    'unarmed combat':60
+                    'unarmed_combat':60
                 },
                 pick: {
                     picks: 0,
@@ -1152,12 +1153,12 @@ var deltagreen = {
 		},
 		skillpackages: {
 			'artist, actor, or musician':['alertness','craft-choose','disguise','persuade','art-choose','art-choose','art-choose','HUMINT'],
-			'athlete': ['alertness','athletics','dodge','first aid','HUMINT','persuade','swim','unarmed combat'],
+			'athlete': ['alertness','athletics','dodge','first_aid','HUMINT','persuade','swim','unarmed_combat'],
 		},
 		subskills: {
 			'art' : ['acting','creative writing','dance','insturment','forgery','painting','sculpture','singing'],
 			'craft' : ['electrician','mechanic','locksmithing','gunsmith','architect','carpenter','microelectronics','plumber'],
-			'military science' : ['land','air','sea'],
+			'military_science' : ['land','air','sea'],
 			'pilot': ['airplane','drone','helicopter','small boat','ship','space shuttle'],
 			'science' : ['astronomy','biology','botany','chemistry','engineering','genetics','geology','mathematics','meteorology','physics','planetology','zoology']
 		},
@@ -1172,12 +1173,12 @@ var deltagreen = {
     				},
     				'National Security Branch': {
     					'professions': ['federal agent','intelligence analyst','intelligence case officer'],
-    					'bonus': ['language','HUMINT','SIGINT','computer science'],
+    					'bonus': ['language-1','HUMINT','SIGINT','computer_science'],
     					'description' : 'The NSB specializes in counterterrorism and counterintelligence.'
     				},
     				'Intelligence and Operations Support Section' : {
     				    'professions' : ['computer scientist','intelligence case officer','physician','scientist'],
-    				    'bonus' : ['computer science','HUMINT','psychotherapy','science'],
+    				    'bonus' : ['computer_science','HUMINT','psychotherapy','science'],
     				    'description':'IOSS supports the most high-profile, dangerous, and sensitive investigations by providing highly specialized experts. IOSS includes the vaunted Behavioral Analysis Units, the Violent Criminal Apprehension Program (ViCAP), and the Crisis Management Unit which provides support and training for disasters and high-risk public events.'
     				},
                     'Directorate of Intelligence' : {
@@ -1188,7 +1189,7 @@ var deltagreen = {
                     'Hostage Rescue Team or SWAT' : {
                         'professions' : ['special operator'],//['special.swat'],
                         'special' : 'swat',
-                        'bonus' : ['criminology','melee weapons','firearms','stealth'],
+                        'bonus' : ['criminology','melee_weapons','firearms','stealth'],
                         'description': 'HRT and SWAT specialize in kinetic tactical know-how and rapid takedowns in all types of environments. HRT is a unique SWAT force that specializes in anti-terror operations.'
                     }
 			}
@@ -1208,7 +1209,7 @@ var deltagreen = {
     			    },
     			    'Special Operations Division' : {
     			        'professions': ['computer scientist','intelligence analyst'],
-    			        'bonus': ['computer science','criminology','law','SIGINT'],
+    			        'bonus': ['computer_science','criminology','law','SIGINT'],
     			        'description':'A classified and clandestine branch that specializes in electronic surveillance.'
     			    },
                     'Foreign-Deployed Advisory Support Teams' : {
@@ -1229,18 +1230,18 @@ var deltagreen = {
     			    },
     			    'Office of Intelligence' : {
     			        'professions': ['media specialist','intelligence analyst'],
-    			        'bonus': ['bureaucracy','computer science','science-choose','SIGINT'],
+    			        'bonus': ['bureaucracy','computer_science','science-choose','SIGINT'],
     			        'description': 'Provides intelligence and briefing materials for HSI and ERO operations.'
     			    },
     			    'Removal Divison, ERO' : {
     			        'professions': ['federal agent'],
-    			        'bonus': ['athletics','HUMINT','persuade','unarmed combat'],
+    			        'bonus': ['athletics','HUMINT','persuade','unarmed_combat'],
     			        'description': 'ERO/RD agents apprehend and transport illegal aliens.'
     			    },
     			    'Special Response Team' : {
     			        'professions': ['special operator'],//['special.srt'],
                         'special' : 'srt',
-    			        'bonus': ['dodge','firearms','criminology','melee weapons'],
+    			        'bonus': ['dodge','firearms','criminology','melee_weapons'],
     			        'description':'Provides SWAT support for ICE operations. SRT members are all volunteers, most of whom have regular “day jobs” as agents in other ICE divisions.'
     			    }
     			}
@@ -1256,7 +1257,7 @@ var deltagreen = {
     			    'Special Operations Group' : {
     			        'professions': ['special operator'],//['special.sog'],
                         'special' : 'sog',
-    			        'bonus': ['athletics','dodge','firearms','unarmed combat'],
+    			        'bonus': ['athletics','dodge','firearms','unarmed_combat'],
     			        'description':'The SOG is a highly trained, all-volunteer group of deputy marshals that are on call to provide SWAT support in emergencies.'
     			    }
     			}
@@ -1266,29 +1267,29 @@ var deltagreen = {
                 departments: {
     			    'US Army Medical Research Institute of Infectious Diseases' : {
     			        'professions': ['scientist'],
-    			        'bonus': ['bureaucracy','military science-choose','pharmacy','science-biology'],
+    			        'bonus': ['bureaucracy','military_science-choose','pharmacy','science-biology'],
     			        'description':'USAMRIID (pronounced “you-sam-rid”) combats the use of biological agents in warfare. The Institute, as it’s called, cooperates closely with the FBI and CDC.'
     			    },
     			    '902nd Military Intelligence Group' : {
     			        'professions' : ['soldier'],
-    			        'bonus': ['bureaucracy','HUMINT','language','SIGINT'],
+    			        'bonus': ['bureaucracy','HUMINT','language-1','SIGINT'],
     			        'description':'Analysts of the 902nd advise and support counterintelligence, counterterrorism, and counterespionage operations.'
     			    },
     			    '10th Mountain Division' : {
     			        'professions': ['special operator'],//['special.10MD'],
                         'special' : '10MD',
-    			        'bonus': ['athletics','firearms','first aid','heavy weapons'],
+    			        'bonus': ['athletics','firearms','first_aid','heavy_weapons'],
     			        'description':'The 10th Mountain is designed to deploy quickly in force to austere environments, especially mountainous and arctic terrain.'
     			    },
     			    '1st Brigade, 1st Cavalry' : {
     			        'professions': ['special operator'],//['special.1B1C'],
                         'special' : '1B1C',
-    			        'bonus': ['firearms','heavy machinery','SIGINT','survival'],
+    			        'bonus': ['firearms','heavy_machinery','SIGINT','survival'],
     			        'description':'A long-range surveillance and reconnaissance force.'
     			    },
     			    'Army Medical Corps' : {
     			        'professions': ['physician'],
-    			        'bonus': ['athletics','first aid','medicine','surgery'],
+    			        'bonus': ['athletics','first_aid','medicine','surgery'],
     			        'description':'The Corps consists of experienced primary care physicians that can be forward deployed or attached to units in the field.'
     			    }
     			}
@@ -1298,12 +1299,12 @@ var deltagreen = {
                 departments: {
     			    '41st Rescue Squadron' : {
     			        'professions': ['pilot'],
-    			        'bonus': ['alertness','first aid','navigation','pilot-helicopter'],
+    			        'bonus': ['alertness','first_aid','navigation','pilot-helicopter'],
     			        'description':'The 41st specializes in combat rescue of downed aircrew behind enemy lines using advanced (and aggressive) flying techniques. The Squadron also provides pre-launch surveillance and after-mission astronaut recovery for NASA.'
     			    },
     			    '614th Air and Space Operations Center' : {
     			        'professions': ['intelligence analyst'],
-    			        'bonus' : ['computer science','craft-microelectronics','persuade','SIGINT'],
+    			        'bonus' : ['computer_science','craft-microelectronics','persuade','SIGINT'],
     			        'description':'The 614th is part of Air Force Space Command (AFSPC). The 614th provides command and control as well as space asset (satellite) coordination for the Joint Space Operations Center (JSpOC). Members of the 614th work closely with NASA and other branches of the military in Cheyenne Mountain.'
     			    },
     			    '432d Operations Group' : {
@@ -1313,7 +1314,7 @@ var deltagreen = {
     			    },
     			    '70th Intelligence, Surveillance and Reconnaissance Wing' : {
     			        'professions' : ['computer scientist','intelligence analyst'],
-    			        'bonus' : ['bureaucracy','computer science','science-math','SIGINT'],
+    			        'bonus' : ['bureaucracy','computer_science','science-math','SIGINT'],
     			        'description':'The 70th supports the Air Force and the wider intelligence community with cryptologic and signals intelligence. It is stationed at Fort Meade in Maryland.'
     			    },
     			    '354th Fighter Squadron' : {
@@ -1337,15 +1338,15 @@ var deltagreen = {
     			        'description':'The NCIS performs criminal investigations on behalf of the Navy and Marine Corps. About half its 2,500 employees are civilian special agents, supported by analysts and forensic experts. A few counter-intelligence investigators are Navy reservists.'
     			    },
     			    'Explosive Ordnance Disposal Group One': {
-    			        'profession':['special operator'],//['special.eod'],
+    			        'professions':['special operator'],//['special.eod'],
                         'special' : 'eod',
-    			        'bonus':['alertness','athletics','craft-electronics','first aid'],
+    			        'bonus':['alertness','athletics','craft-electronics','first_aid'],
     			        'description':'EOD techs disarm all types of ordnance, including improvised, chemical, biological, and nuclear weapons. They are expected to forward deploy with any type of unit, including special-operations forces. Navy EOD techs are also elite divers.'
     			    },
     			    'Hospital Corpsman': {
     			        'professions': ['special operator'],//['special.navyhospital'],
                         'special' : 'navyhospital',
-    			        'bonus' : ['first aid','medicine','psychotherapy','surgery'],
+    			        'bonus' : ['first_aid','medicine','psychotherapy','surgery'],
     			        'description':'The Hospital Corps provides highly trained enlisted medical personnel to Navy facilities and vessels and to the Marine Corps. They are often embedded with Marine units and forward deployed.'
     			    }
     			}
@@ -1368,13 +1369,13 @@ var deltagreen = {
     			    'Maritime Special Purpose Force' : {
     			        'professions' : ['special operator'],//['special.mspf'],
                         'special' : 'mspf',
-    			        'bonus' : ['heavy weapons','navigate','stealth'],
+    			        'bonus' : ['heavy_weapons','navigate','stealth'],
     			        'description':'This unit supports larger elements of the Navy, Marines and SOCOM with high-firepower surgical insertion and raiding capabilities. The MSPF is sometimes called upon for hostage rescue.'
     			    },
     			    'Marine Corps Security Force Regiment' : {
     			        'professions': ['special operator'],//['special.rtt'],
                         'special' : 'rtt',
-    			        'bonus' : ['alertness','firearms','melee weapons','unarmed combat'],
+    			        'bonus' : ['alertness','firearms','melee_weapons','unarmed_combat'],
     			        'description':'The Security Force Regiment provides security at high-value Navy facilities, such as those containing nuclear submarines and nuclear weapons. It houses two rapid response units, the Fleet Antiterrorism Security Team (FAST) and the Recapture Tactics Team (RTT). RTTs operate like SWAT units at particular facilities, while FAST teams deploy around the world to augment the defense of U.S. government installations.'
     			    }
     			}
@@ -1397,13 +1398,13 @@ var deltagreen = {
     			    'Army - Rangers' : {
     			        'professions' : ['special operator'],//['special.rangers'],
                         'special' : 'rangers',
-    			        'bonus' : ['athletics','melee weapons','stealth','unarmed combat'],
+    			        'bonus' : ['athletics','melee_weapons','stealth','unarmed_combat'],
     			        'description':'The Rangers specialize in raiding and forcible seizure of critical installations or assets.'
     			    },
     			    'Army - 4th Military Information Support Team' : {
     			        'professions' : ['special operator'],//['special.mist'],
                         'special' : 'mist',
-    			        'bonus': ['athletics','language','psychotherapy','SIGINT'],
+    			        'bonus': ['athletics','language-1','psychotherapy','SIGINT'],
     			        'description':'MISTs deploy into countries with active groups that have ideologies hostile to the United States and work to undermine those ideologies through psychological operations and material/monetary support of friendly organizations.'
     			    },
     			    'Army - 160th Special Operations Aviation Regiment' : {
@@ -1421,13 +1422,13 @@ var deltagreen = {
     			    'Marines - Raider Regiment' : {
     			        'professions':['special operator'],//['special.raider'],
                         'special' : 'raider',
-    			        'bonus':['athletics','heavy weapons','HUMINT','melee weapons'],
+    			        'bonus':['athletics','heavy_weapons','HUMINT','melee_weapons'],
     			        'description':'Formerly the Marine Special Operations Regiment (MSOR), the Marine Raiders are an asymmetrical anti-terror unit that has the additional capability to operate on its own in hostile environments. The Raiders have been called upon to conduct hostage rescues, gather intelligence, and train friendly forces.'
     			    },
     			    'Navy - SEALs' : {
     			        'professions' : ['special operator'],//['special.seal'],
                         'special' : 'seal',
-    			        'bonus' : ['firearms','melee weapons','stealth','unarmed combat'],
+    			        'bonus' : ['firearms','melee_weapons','stealth','unarmed_combat'],
     			        'description':'DEVGRU and SEAL (Sea, Air and Land) teams are exceptionally trained small units that execute lightning-quick operations in all environment. These teams specialize in high-risk anti-terror operations, and hostage extraction, and are often involved in the most sensitive missions. Where the Army’s Special Forces train to work with local forces and populations, the SEALs train strictly for combat.'
     			    }
     			}
@@ -1464,17 +1465,17 @@ var deltagreen = {
                 departments: {
     			    'Western Hemisphere Affairs Regional Bureau' : {
     			        'professions':['foreign service officer'],
-    			        'bonus': ['anthropology','bureaucracy','language','history'],
+    			        'bonus': ['anthropology','bureaucracy','language-1','history'],
     			        'description':'Regional bureaus like WHA (which covers the Americas) are where many FSOs work when posted to State Department headquarters.'
     			    },
     			    'Bureau of Diplomatic Security' : {
                         'professions':['federal agent'],
-                        'bonus': ['bureaucracy','language','HUMINT','persuade'],
+                        'bonus': ['bureaucracy','language-1','HUMINT','persuade'],
                         'description':'Diplomatic Security protects VIPs, investigates fraud, conducts security investigations, and protects American personnel and facilities abroad. Most DSS special agents are jointly Foreign Service Officers and law enforcement officers.'
                     },
     				'Diplomatic Courier Service' : {
     					'professions' : ['foreign service officer'],
-    					'bonus' : ['bureaucracy','language','law','persuade'],
+    					'bonus' : ['bureaucracy','language-1','law','persuade'],
     					'description':'Diplomatic couriers transport and secure sensitive information and papers around the world. Per the Geneva Conventions, diplomatic couriers cannot be searched while transporting official material.'
     				},
     				'Bureau of International Crime and Law Enforcement Affairs' : {
@@ -1509,7 +1510,7 @@ var deltagreen = {
     				},
     				'Public Health Service Commissioned Corps' : {
     					'professions': ['nurse','physician','psychotherapy','surgery'],
-    					'bonus':['first aid','pharmacy','psychotherapy','surgery'],
+    					'bonus':['first_aid','pharmacy','psychotherapy','surgery'],
     					'description':'A U.S. uniformed service that employs commissioned officers who hold ranks and wear uniforms similar to the Navy’s. Its experts provide public health services to the Coast Guard and to many poor and tribal areas. Hundreds are assigned to the CDC, including many in rapid deployment forces that can respond to a crisis in as little as 12 hours.'
     				}
     			}
@@ -1665,6 +1666,16 @@ var deltagreen = {
             });
             deltagreen.methods.configureProfessions();
         },
+
+		setSubskill: function(skillparent, newSkillName, newSkillValue) {
+			var parentSkillWrapper = $('.subSkillWrapper[data-parentskill="'+skillparent+'"]');
+            var newSkill = parentSkillWrapper.find('.input-group').first().clone();
+            newSkill.removeAttr('id');
+            newSkill.find('.input-group-label').html(newSkillName);
+            newSkill.find('.input-group-field').val(newSkillValue);
+            parentSkillWrapper.append(newSkill);
+		},
+
         configureProfessions: function() {
             var allagencies = deltagreen.data.agencies;
             var targetSelectTree = $('ul#fedAgency');
@@ -1680,7 +1691,7 @@ var deltagreen = {
                 targetDepartmentList.empty();
                 $('#fedAgency li.selected').removeClass('selected');
                 $('.tier2 h3').html(agencyLongName + ' ('+agency+')');
-                $('.tier2 p').text(agencyData.description);
+                $('.tier2 p').html(agencyData.description);
                 $(this).addClass('selected');
                 //console.log(recommendedProfessions);
 
@@ -1704,13 +1715,13 @@ var deltagreen = {
                             if (profession === 'special operator') {
                                 specOpsRef=' data-reference="'+deptData.special+'" ';
                             }
-                            $('#fedProfession').append('<li'+recommendClass+'><a>'+profession+'</a></li>');
-							$('#fedProfession li').on('click',function(){
-								var specOps = $(this).attr('data-reference');
-								
-								deltagreen.methods.setProfessionValues($(this).text(), specOps);
-								
-							});
+                            $('#fedProfession').append('<li'+recommendClass+specOpsRef+'><a>'+profession+'</a></li>');
+
+                        });
+                        $('#fedProfession li').on('click',function(){
+                            var specOps = $(this).attr('data-reference');
+
+                            deltagreen.methods.setProfessionValues($(this).text(), specOps);
                         });
                     });
 
@@ -1720,16 +1731,150 @@ var deltagreen = {
 		setProfessionValues: function(profession,specOps) {
 			var agencyAcronym = $('#fedAgency .selected').attr('data-value');
 			var agencyBranch = $('#fedDepartment .selected').text();
-			var professionalData = (!specOps)?deltagreen.data.professions[profession]:deltagreen.data.specialoperator[specOps];
+			var professionalData = (specOps !== "false")?deltagreen.data.specialoperator[specOps]:deltagreen.data.professions[profession];
+			var hasLanguage = false;
+			var hasSubskill = false;
+			deltagreen.playerdata = professionalData;
 
 			deltagreen.data['activeProfession']=profession;
 			if (agencyAcronym !== 'academic' & agencyAcronym !== 'private') {
 				$('#employer').val(agencyBranch + ' ('+agencyAcronym+')');
 			}
 			$('#profession').val(profession);
-			$.each(professionalData.skills, function(skillName, value) {
-				$('input[id="skill-'+skillName+'"]').val(value);
-			});
+
+			if (deltagreen.playerdata.pick.picks !== 0) {
+
+                var picks = deltagreen.playerdata.pick.picks;
+                var skills = deltagreen.playerdata.pick.skills;
+                var bonusSkillChooser = $('.bonusSkillsWrapper');
+
+                bonusSkillChooser.find('h1').text('Choose '+ picks);
+                bonusSkillChooser.find('.bonusSkillCount').text(picks);
+                bonusSkillChooser.show();
+
+                $.each(skills, function(skillName, skillValue) {
+                    deltagreen.methods.appendSkillDialogue(skillName, skillValue, true);
+                });
+                $('.skillItem input[type="checkbox"]').on('change', function(e) {
+                    console.log(picks);
+                    console.log($('.skillItem input[type="checkbox"]:checked').length);
+                    if ($('.skillItem input[type="checkbox"]:checked').length > picks) {
+                        $(this).removeAttr('checked');
+                    }
+                });
+                //$('#bonusSkillChooser').foundation('open');
+
+            }
+            deltagreen.methods.configureSkillOptions(deltagreen.playerdata);
+
+		},
+
+		configureSkillOptions: function(professionalData) {
+            $.each(professionalData.skills, function(skillName, value) {
+                deltagreen.methods.appendSkillDialogue(skillName, value, false);
+            });
+
+            $('#skillOptions').foundation('open');
+		},
+
+		appendSkillDialogue: function (skillName, value, choice) {
+		    //input type="checkbox" value="">
+                var parsed = skillName.split('-');
+                var template = $('#skillTemplate').clone();
+                var skillNameCorrected = (parsed[0]).replace('_',' ');
+                var targetedTemplate = $('.languageTemplate').last();
+                //bonusSkillsWrapper
+                if (parsed.length >1) {
+                    if (parsed[0] === 'language') {
+                       template = $('#languageTemplate').clone();
+                       template.find('label').text('Language at ' + value + '%');
+                       template.find('input').attr('data-skillvalue',value);
+                       //$.data(document.body, 'hasLanguage', true);
+                    } else if (parsed[1] === "choose"){
+                        //run subskill chooser
+                        var subSkills = deltagreen.data.subskills[parsed[0]];
+                        var subSkillDD;
+                        template = $('#subSkillTemplate').clone();
+                        subSkillDD=template.find('select');
+                        template.find('label').text(capitalizeFirstLetter(skillNameCorrected)+' at ' + value + '%');
+                        subSkillDD.attr('data-skillvalue',value).attr('data-skillparent',parsed[0]);
+
+                        $.each(subSkills, function (key, subSkillName) {
+                            subSkillDD.append('<option value="'+capitalizeFirstLetter(subSkillName)+'">'+capitalizeFirstLetter(subSkillName)+'</option>');
+                        });
+                        targetedTemplate = $('.subSkillTemplate').last();
+                        //$.data(document.body, 'hasSubskill', true);
+                    } else {
+                        //run subskill autofill
+                        template.find('.skillName').text(capitalizeFirstLetter(skillName));
+                        template.find('.skillValue').text(value);
+                        targetedTemplate = $('.skillTemplate').last();
+                        //deltagreen.methods.setSubskill(parsed[0], capitalizeFirstLetter(parsed[1]), value);
+                    }
+                } else {
+                    template.find('.skillName').text(capitalizeFirstLetter(skillNameCorrected));
+                    template.find('.skillValue').text(value);
+                    targetedTemplate = $('.skillTemplate').last();
+                    //$('input[id="skill-'+skillName+'"]').val(value);
+                }
+                template.removeAttr('id');
+                if (choice) {
+                    template.removeClass('skillTemplate');
+                    template.find('label').prepend('<input type="checkbox" value="">');
+                    $('.bonusSkillsWrapper fieldset').append(template);
+                } else {
+                    targetedTemplate.after(template);
+                }
+
+
+                $.data(template, 'skillName', skillName);
+                $.data(template, 'skillValue', value);
+                template.addClass('skillItem').show();
+		},
+
+		configureProfessionSkillDialogues: function(professionalData) {
+		    $.each(professionalData.skills, function(skillName, value) {
+                var parsed = skillName.split('-');
+                console.log(skillName);
+                if (parsed.length >1) {
+                    if (parsed[0] === 'language') {
+                       var template = $('#languageSelector #languageTemplate').clone();
+                       template.removeAttr('id');
+                       template.find('label').text('Language '+parsed[1]+' at ' + value + '%');
+                       template.find('input').attr('data-skillvalue',value);
+                       $('#languageSelectorButton').before(template);
+                       template.show();
+                       hasLanguage = true;
+                    } else if (parsed[1] === "choose"){
+                        //run subskill chooser
+                        var template = $('#subSkillChooser #subSkillTemplate').clone();
+                        var subSkills = deltagreen.data.subskills[parsed[0]];
+                        var subSkillDD = template.find('select');
+                        template.find('label').text(capitalizeFirstLetter(parsed[0])+' at ' + value + '%');
+                        template.removeAttr('id');
+                        subSkillDD.attr('data-skillvalue',value).attr('data-skillparent',parsed[0]);
+
+                        $.each(subSkills, function (key, subSkillName) {
+                            subSkillDD.append('<option value="'+capitalizeFirstLetter(subSkillName)+'">'+capitalizeFirstLetter(subSkillName)+'</option>');
+                        });
+                        $('#subSkillButton').before(template);
+                        template.show();
+                        hasSubskill = true;
+                        $.data(document.body, 'hasSubskill', true);
+                    } else {
+                        //run subskill autofill
+                        deltagreen.methods.setSubskill(parsed[0], capitalizeFirstLetter(parsed[1]), value);
+                    }
+                } else {
+                    $('input[id="skill-'+skillName+'"]').val(value);
+                }
+                if (hasLanguage) {
+                     $('#languageSelector').foundation('open');
+                } else if ($.data(document.body, 'hasSubskill')) {
+                    $('#subSkillChooser').foundation('open');
+                }
+
+            });
 		},
         recomendedProfessions: function() {
             var stats = {
@@ -1759,4 +1904,7 @@ var deltagreen = {
         }
     }
 };
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 deltagreen.methods.initEvents();
