@@ -112,6 +112,24 @@
             .recommended a {
                 font-weight: bold;
             }
+            .hidden {
+                display: none;
+            }
+            .languageTemplate {
+                margin-bottom:1em;
+            }
+            #bonusSkillTemplate label {
+                text-transform:capitalize;
+            }
+            fieldset {
+                border-radius: 3px;
+                border: 1px solid #555555;
+                padding: 0.35em 0.625em 0.75em;
+                margin: 1em 2px;
+            }
+            legend {
+              padding-left: 2px; padding-right: 2px;
+            }
         </style>
     </head>
     <body>
@@ -120,6 +138,7 @@
                 <h1>Delta Green</h1>
                 <p>
                     <a data-open="statRolls">Begin guided character creation</a>
+                    <a data-open="languageSelector" id="languageSelectorLink" class="hidden">Open language selector</a>
                 </p>
             </div>
             <div class="medium-6 columns">
@@ -215,7 +234,7 @@
                             <label>Strength</label>
                         </div>
                         <div class="large-3 columns">
-                            <input type="number" id="attr-str" disabled="disabled" value="10">
+                            <input type="number" id="attr-str" disabled="disabled" value="9">
                         </div>
                         <div class="large-6 columns">
                             <span id="feature-str"><input type="text" id="des-str" class="statDescriptor"></span>
@@ -226,7 +245,7 @@
                             <label>Constitution</label>
                         </div>
                         <div class="large-3 columns">
-                            <input type="number" id="attr-con" disabled="disabled" value="10">
+                            <input type="number" id="attr-con" disabled="disabled" value="9">
                         </div>
                         <div class="large-6 columns">
                             <span id="feature-con"><input type="text" id="des-con" class="statDescriptor"></span>
@@ -237,7 +256,7 @@
                             <label>Dexterity</label>
                         </div>
                         <div class="large-3 columns">
-                            <input type="number" id="attr-dex" disabled="disabled" value="10">
+                            <input type="number" id="attr-dex" disabled="disabled" value="9">
                         </div>
                         <div class="large-6 columns">
                             <span id="feature-dex"><input type="text" id="des-dex" class="statDescriptor"></span>
@@ -248,7 +267,7 @@
                             <label>Intelligence</label>
                         </div>
                         <div class="large-3 columns">
-                            <input type="number" id="attr-inte" disabled="disabled" value="10">
+                            <input type="number" id="attr-inte" disabled="disabled" value="9">
                         </div>
                         <div class="large-6 columns">
                             <span id="feature-inte"><input type="text" id="des-inte" class="statDescriptor"></span>
@@ -259,7 +278,7 @@
                             <label>Power</label>
                         </div>
                         <div class="large-3 columns">
-                            <input type="number" id="attr-pow" disabled="disabled" value="10">
+                            <input type="number" id="attr-pow" disabled="disabled" value="9">
                         </div>
                         <div class="large-6 columns">
                             <span id="feature-pow"><input type="text" id="des-pow" class="statDescriptor"></span>
@@ -270,7 +289,7 @@
                             <label>Charisma</label>
                         </div>
                         <div class="large-3 columns">
-                            <input type="number" id="attr-cha" disabled="disabled" value="10">
+                            <input type="number" id="attr-cha" disabled="disabled" value="9">
                         </div>
                         <div class="large-6 columns">
                             <span id="feature-cha"><input type="text" id="des-cha" class="statDescriptor"></span>
@@ -372,14 +391,12 @@
                                     <span class="input-group-label">Archeology</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-archeology" />
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-label">Art</span>
-                                    <input class="input-group-field" type="number" max="99" id="skill-art" />
-                                </div>
-								<div class="input-group">
-                                    <span class="input-group-label"> </span>
-                                    <input class="input-group-field" type="number" max="99" id="skill-art1" />
-                                </div>
+                                <div class="subSkillWrapper" data-parentskill="art">
+                                    <div class="input-group">
+                                        <span class="input-group-label">Art</span>
+                                        <input class="input-group-field" type="number" max="99" id="skill-art" />
+                                    </div>
+								</div>
                                 <div class="input-group knightSkill">
                                     <span class="input-group-label">Artillery</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-artillery" />
@@ -396,13 +413,11 @@
                                     <span class="input-group-label">Computer Science</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-computer_science" />
                                 </div>
+                                <div class="subSkillWrapper" data-parentskill="craft">
                                 <div class="input-group">
                                     <span class="input-group-label">Craft</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-craft" />
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-label"> </span>
-                                    <input class="input-group-field" type="number" max="99" id="skill-craft1" />
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-label">Criminology</span>
@@ -466,14 +481,12 @@
                                     <span class="input-group-label">Melee Weapons</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-melee_weapons" value="30" />
                                 </div>
+                                <div class="subSkillWrapper" data-parentskill="military_science">
 								<div class="input-group">
                                     <span class="input-group-label">Military Science</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-military_science" />
                                 </div>
-								<div class="input-group">
-                                    <span class="input-group-label"></span>
-                                    <input class="input-group-field" type="number" max="99" id="skill-military_science1" />
-                                </div>
+								</div>
 								<div class="input-group">
                                     <span class="input-group-label">Navigate</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-navigate" value="10" />
@@ -490,13 +503,11 @@
                                     <span class="input-group-label">Pharmacy</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-pharmacy" />
                                 </div>
+                                <div class="subSkillWrapper" data-parentskill="pilot">
                                 <div class="input-group">
                                     <span class="input-group-label">Pilot</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-pilot" />
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-label"> </span>
-                                    <input class="input-group-field" type="number" max="99" id="skill-pilot1" />
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-label">Psychotherapy</span>
@@ -508,13 +519,11 @@
                                     <span class="input-group-label">Ride</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-ride" value="10" />
                                 </div>
+                                <div class="subSkillWrapper" data-parentskill="science">
                                 <div class="input-group">
                                     <span class="input-group-label">Science</span>
                                     <input class="input-group-field" type="number" max="99" id="skill-science" />
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-label"></span>
-                                    <input class="input-group-field" type="number" max="99" id="skill-science1"/>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-label">Search</span>
@@ -545,7 +554,10 @@
                                     <input class="input-group-field" type="number" max="99" id="skill-unarmed_combat" value="40" />
                                 </div>
 								<h5>Languages and Other Skills</h5>
-								<div class="input-group">
+								<div id="languageSkills">
+
+								</div>
+								<div class="input-group" id="additionalSkills">
                                     <span class="input-group-label"></span>
                                     <input class="input-group-field" type="number" max="99" />
                                 </div>
@@ -554,6 +566,32 @@
                     </div>
                 </div>
 			</div>
+		</div>
+		<div class="reveal" id="skillOptions" data-reveal-id="skillOptions" data-reveal>
+		    <h1>Skill options</h1>
+            <p class="lead">
+                Your profession grants you the following skills.  Some professions have further options you can make to personalize your character.
+            </p>
+            <div class="skillTemplate hidden" id="skillTemplate">
+                <label><span class="skillName"></span> (<span class="skillValue"> </span>%)</label>
+            </div>
+            <div class="languageTemplate hidden" id="languageTemplate">
+                <label>Language at 40%</label>
+                <input placeholder="Language Skill" class="languageSkill">
+            </div>
+            <div class="subSkillTemplate hidden" id="subSkillTemplate">
+                <label> at 40%</label>
+                <select class="subSkill">
+                    <option value="-1">-- Select --</option>
+                </select>
+            </div>
+            <div class="bonusSkillsWrapper hidden">
+                <fieldset>
+                    <legend>Choose <span class="bonusSkillCount">1</span></legend>
+                </fieldset>
+            </div>
+            <a class="button" id="submitSkillOptions"><span>Select</span></a>
+
 		</div>
 
         <div class="reveal" id="statRolls" data-reveal>
